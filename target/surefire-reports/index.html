@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-test_TestGeneral" class="navigator-link">
-              <span class="suite-name border-failed">test.TestGeneral</span>
+              <span class="suite-name border-passed">test.TestGeneral</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -93,21 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-test_TestGeneral" class="hide-methods failed suite-test_TestGeneral"> (hide)</a> <!-- hide-methods failed suite-test_TestGeneral -->
-                      <a href="#" panel-name="suite-test_TestGeneral" class="show-methods failed suite-test_TestGeneral"> (show)</a> <!-- show-methods failed suite-test_TestGeneral -->
-                    </span>
-                    <div class="method-list-content failed suite-test_TestGeneral">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-test_TestGeneral" title="test.TestGeneral" class="method navigator-link" hash-for-method="verificarCargaProductos">verificarCargaProductos</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-test_TestGeneral -->
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -116,6 +102,11 @@
                       <a href="#" panel-name="suite-test_TestGeneral" class="show-methods passed suite-test_TestGeneral"> (show)</a> <!-- show-methods passed suite-test_TestGeneral -->
                     </span>
                     <div class="method-list-content passed suite-test_TestGeneral">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-test_TestGeneral" title="test.TestGeneral" class="method navigator-link" hash-for-method="verificarCargaProductos">verificarCargaProductos</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-test_TestGeneral" title="test.TestGeneral" class="method navigator-link" hash-for-method="verificarConexion">verificarConexion</a> <!-- method navigator-link -->
@@ -133,9 +124,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-test_TestGeneral" class="panel test_TestGeneral">
-          <div class="suite-test_TestGeneral-class-failed">
+          <div class="suite-test_TestGeneral-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
+              <img src="passed.png"/>
               <span class="class-name">test.TestGeneral</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -144,21 +135,8 @@
                   <a name="verificarCargaProductos">
                   </a> <!-- verificarCargaProductos -->
                   <span class="method-name">verificarCargaProductos</span>
-                  <div class="stack-trace">java.lang.NullPointerException
-	at test.TestGeneral.verificarCargaProductos(TestGeneral.java:21)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-... Removed 36 stack frames
-</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-test_TestGeneral-class-failed -->
-          <div class="suite-test_TestGeneral-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">test.TestGeneral</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
                   <a name="verificarConexion">
@@ -223,16 +201,16 @@ data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'verificarCargaProductos')
 data.setCell(0, 2, 'test.TestGeneral')
-data.setCell(0, 3, 493);
+data.setCell(0, 3, 385);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'verificarConexion')
 data.setCell(1, 2, 'test.TestGeneral')
-data.setCell(1, 3, 39);
+data.setCell(1, 3, 23);
 window.suiteTableData['test_TestGeneral']= { tableData: data, tableDiv: 'times-div-test_TestGeneral'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 532 ms</span>
+              <span class="suite-total-time">Total running time: 408 ms</span>
               <div id="times-div-test_TestGeneral">
               </div> <!-- times-div-test_TestGeneral -->
             </div> <!-- times-div -->
@@ -260,14 +238,12 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">test.TestGeneral</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">verificarCargaProductos</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verificarConexion</span>
-                <span class="method-start">496 ms</span>
+                <span class="method-start">387 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

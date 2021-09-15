@@ -48,8 +48,8 @@
             input[type="text"] {
                 margin: 4px;
                 font-size: 20px;
-                width: 80%;
-                border-radius: 5px;
+                width: 70%;
+                border-radius: 4px;
                 text-align: left;
             }
 
@@ -79,33 +79,35 @@
                             <th>Acción</th>
                         </tr>
                     </thead>
-                    <%
-                        ColeccionProducto coleccion = new ColeccionProducto();
-                        boolean hayDatos = coleccion.cargarProductos();
-                    %>    
 
                     <tbody>
-                        <%
+                        <%                           
+                            ColeccionProducto coleccion = new ColeccionProducto();
+                            boolean hayDatos = coleccion.cargarProductos();
+                            
                             if (hayDatos) {
-                        %> 
+
+                                for (Productos j : coleccion.getLista()) {
+                        %>
                         <tr>
-                            <td>1</td>
-                            <td>Arroz</td>
-                            <td>Cantidad en Kilos</td>
-                            <td>12</td>
-                            <td>2021-09-15</td>
+                            <td><%= j.getIdIngredients()%></td>
+                            <td><%= j.getNombre()%></td>
+                            <td><%= j.getDescripcion()%></td>
+                            <td><%= j.getCantidad()%></td>
+                            <td><%= j.getFecha()%></td>
                             <td><button type="button" class="btn btn-info"><i class="fas fa-edit"></i></button>
-                                <button type="button" class="btn btn-danger"><i class="fas fa-trash"></i></button></td>
+                                <button type="button" class="btn btn-danger"><i class="bi bi-trash"></i></button></td>
                         </tr>
                         <%
-                            }                            
-                            else {
+                            }
+          
+                        } else {
                         %>
                         <tr>
                             <td colspan="5">No hay datos</td>
                         </tr>
                         <%
-                            }                            
+                            }
                         %>
                     </tbody>
                 </table>

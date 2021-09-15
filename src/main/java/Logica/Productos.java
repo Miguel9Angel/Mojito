@@ -2,7 +2,8 @@ package Logica;
 
 
 public class Productos {
-
+    
+    int idIngredients;
     String nombre;
     String descripcion;
     String fecha;
@@ -18,8 +19,24 @@ public class Productos {
         this.Cantidad = Cantidad;
         this.fecha = fecha;
     }
+    
+    public Productos(int idIngredients, String nombre, String descripcion, int Cantidad, String fecha) {
+        this.idIngredients = idIngredients;
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+        this.Cantidad = Cantidad;
+        this.fecha = fecha;
+    }
 
     //------------------------ getters and setters --------------------------------------
+    public int getIdIngredients() {
+        return idIngredients;
+    }
+
+    public void setIdIngredients(int idIngredients) {
+        this.idIngredients = idIngredients;
+    }
+    
     public String getNombre() {
         return nombre;
     }

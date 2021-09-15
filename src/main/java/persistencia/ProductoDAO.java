@@ -10,16 +10,16 @@ public class ProductoDAO {
     public ArrayList<Productos> consultaProducto(){
         ArrayList<Productos> lista = new ArrayList<>();
         ConexionBD con = new ConexionBD();
-        ResultSet rs = con.ejecutarQuery("SELECT nombre FROM materia_prima;");
+        ResultSet rs = con.ejecutarQuery("SELECT idIngredients, nombre, descripcion, cantidad, fecha FROM materia_prima;");
         try{
             while (rs.next()){
-                int id = rs.getInt("idIngredients");
+                int idIngredients = rs.getInt("idIngredients");
                 String nombre = rs.getString("nombre");
-                String descipcion = rs.getString("descipcion");
+                String descripcion = rs.getString("descripcion");
                 int cantidad = rs.getInt("cantidad");
                 String fecha = rs.getString("fecha");
                 
-                Productos j = new Productos(nombre, descipcion, cantidad, fecha);
+                Productos j = new Productos(idIngredients, nombre, descripcion, cantidad, fecha);
                 lista.add(j);
             }
         }catch(SQLException ex){
