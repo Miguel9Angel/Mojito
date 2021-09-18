@@ -5,30 +5,31 @@ public class Productos {
     
     int idIngredients;
     String nombre;
-    String descripcion;
-    String fecha;
+    int unidadMedida;
+    int tipoMateriaPrima;
     int Cantidad;
 
     //------------------------ Constructores---------------------------------------------
     public Productos() {
     }
 
-    public Productos(String nombre, String descripcion, int Cantidad, String fecha) {
+    public Productos(String nombre, int unidadMedida, int Cantidad, int tipoMateriaPrima) {
         this.nombre = nombre;
-        this.descripcion = descripcion;
+        this.unidadMedida = unidadMedida;
         this.Cantidad = Cantidad;
-        this.fecha = fecha;
+        this.tipoMateriaPrima = tipoMateriaPrima;
     }
     
-    public Productos(int idIngredients, String nombre, String descripcion, int Cantidad, String fecha) {
+    public Productos(int idIngredients, String nombre, int unidadMedida, int Cantidad, int tipoMateriaPrima) {
         this.idIngredients = idIngredients;
         this.nombre = nombre;
-        this.descripcion = descripcion;
+        this.unidadMedida = unidadMedida;
         this.Cantidad = Cantidad;
-        this.fecha = fecha;
+        this.tipoMateriaPrima = tipoMateriaPrima;
     }
 
     //------------------------ getters and setters --------------------------------------
+
     public int getIdIngredients() {
         return idIngredients;
     }
@@ -36,7 +37,7 @@ public class Productos {
     public void setIdIngredients(int idIngredients) {
         this.idIngredients = idIngredients;
     }
-    
+
     public String getNombre() {
         return nombre;
     }
@@ -45,12 +46,20 @@ public class Productos {
         this.nombre = nombre;
     }
 
-    public String getDescripcion() {
-        return descripcion;
+    public int getUnidadMedida() {
+        return unidadMedida;
     }
 
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
+    public void setUnidadMedida(int unidadMedida) {
+        this.unidadMedida = unidadMedida;
+    }
+
+    public int getTipoMateriaPrima() {
+        return tipoMateriaPrima;
+    }
+
+    public void setTipoMateriaPrima(int tipoMateriaPrima) {
+        this.tipoMateriaPrima = tipoMateriaPrima;
     }
 
     public int getCantidad() {
@@ -60,18 +69,10 @@ public class Productos {
     public void setCantidad(int Cantidad) {
         this.Cantidad = Cantidad;
     }
-    
-    public String getFecha() {
-        return fecha;
-    }
-
-    public void setFecha(String fecha) {
-        this.fecha = fecha;
-    }
 
     @Override
     public String toString() {
-        return "Productos{" + "nombre=" + nombre + ", descripcion=" + descripcion + ", Cantidad=" + Cantidad + '}';
+        return "Productos{" + "idIngredients=" + idIngredients + ", nombre=" + nombre + ", unidadMedida=" + unidadMedida + ", tipoMateriaPrima=" + tipoMateriaPrima + ", Cantidad=" + Cantidad + '}';
     }
-
+    
 }

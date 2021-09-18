@@ -73,9 +73,9 @@
                         <tr>
                             <th>id</th>
                             <th>Nombre</th>
-                            <th>Descripcion</th>
+                            <th>Unidad de medida</th>
                             <th>Cantidad</th>
-                            <th>Ultimo ingreso</th>
+                            <th>Origen ingredientes</th>
                             <th>Acción</th>
                         </tr>
                     </thead>
@@ -84,17 +84,25 @@
                         <%                           
                             ColeccionProducto coleccion = new ColeccionProducto();
                             boolean hayDatos = coleccion.cargarProductos();
+                            String tipoMateria= "Mineral";
                             
                             if (hayDatos) {
 
                                 for (Productos j : coleccion.getLista()) {
+                                    if (j.getTipoMateriaPrima()== 1){
+                                        tipoMateria= "Vegetal";
+                                    } else if(j.getTipoMateriaPrima()== 2){
+                                        tipoMateria= "Mineral";
+                                    }else if (j.getTipoMateriaPrima()==3){
+                                        tipoMateria= "Animal";
+                                    }
                         %>
                         <tr>
                             <td><%= j.getIdIngredients()%></td>
                             <td><%= j.getNombre()%></td>
-                            <td><%= j.getDescripcion()%></td>
+                            <td><%= j.getUnidadMedida()%></td>
                             <td><%= j.getCantidad()%></td>
-                            <td><%= j.getFecha()%></td>
+                            <td><%= tipoMateria %></td>
                             <td><button type="button" class="btn btn-info"><i class="fas fa-edit"></i></button>
                                 <button type="button" class="btn btn-danger"><i class="bi bi-trash"></i></button></td>
                         </tr>

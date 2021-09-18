@@ -19,4 +19,14 @@ public class ColeccionProducto {
             return false;
         }
     }
+    
+    public boolean guardarJuguete(Productos j){
+        ProductoDAO dao = new ProductoDAO();
+        boolean guardado = dao.guardarNuevoProducto(j);
+        if (guardado) {
+            return true;
+        }else{
+            return false;
+        }
+    }
 }

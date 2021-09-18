@@ -8,7 +8,7 @@ import java.sql.Statement;
 public class ConexionBD {
     private String conectoriInstalado = "jdbc:mysql:";
     private String host = "localHost:3306";
-    private String baseDatos = "materiaprima";
+    private String baseDatos = "gestirestdb";
     private String username = "root";
     private String password = "admin";
     private Connection conexion;
