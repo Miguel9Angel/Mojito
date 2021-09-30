@@ -49,11 +49,29 @@ public class ConexionBD {
         return rs;
     }
     
-    public ResultSet ejecutarUpdate(String sql){
+    public ResultSet ejecutarInsert(String sql){
         
         ResultSet rs = null;
         try{
-            int cant = ejecutor.executeUpdate(sql);
+            int cant = ejecutor.executeUpdate(sql, Statement.RETURN_GENERATED_KEYS);
+            if (cant >0) {
+                rs = ejecutor.getGeneratedKeys();
+            }
+            
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
+        return rs;
+    }
+    
+    
+    public int ejecutarUpdate(String sql){
+        
+        ResultSet rs = null;
+        int cant = 0;
+        try{
+            cant = ejecutor.executeUpdate(sql);
             if (cant >0) {
                 rs = ejecutor.executeQuery(sql);
             }
@@ -62,7 +80,7 @@ public class ConexionBD {
         catch (Exception e){
             e.printStackTrace();
         }
-        return rs;
+        return cant;
     }
     
     public void desconectar(){

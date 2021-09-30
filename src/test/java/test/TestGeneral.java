@@ -20,4 +20,25 @@ public class TestGeneral {
         ProductoDAO dao = new ProductoDAO();
         Assert.assertTrue(dao.consultaProducto().size() > 0 , "No se cargaron datos. ");
     }
+    
+    @Test
+    public void consultarProductosFiltro(){
+        ProductoDAO dao = new ProductoDAO();
+        String sql = "Libras";
+        Assert.assertTrue(dao.consultarProductosFiltro(sql).size() > 0 , "No se cargaron datos. ");
+    }
+    
+    @Test
+    public void verificarCargaTipoProductos(){
+        ProductoDAO dao = new ProductoDAO();
+        Assert.assertTrue(dao.cargarTiposProducto().size()> 0 , "No se cargaron datos. ");
+    }
+    
+    
+    
+    @Test
+    public void verificarCargaUnidMedidas(){
+        ProductoDAO dao = new ProductoDAO();
+        Assert.assertTrue(dao.cargarUnidadesMedida().size()> 0 , "No se cargaron datos. ");
+    }
 }

@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">5 methods,   5 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,7 +104,22 @@
                     <div class="method-list-content passed suite-test_TestGeneral">
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-test_TestGeneral" title="test.TestGeneral" class="method navigator-link" hash-for-method="consultarProductosFiltro">consultarProductosFiltro</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-test_TestGeneral" title="test.TestGeneral" class="method navigator-link" hash-for-method="verificarCargaProductos">verificarCargaProductos</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-test_TestGeneral" title="test.TestGeneral" class="method navigator-link" hash-for-method="verificarCargaTipoProductos">verificarCargaTipoProductos</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-test_TestGeneral" title="test.TestGeneral" class="method navigator-link" hash-for-method="verificarCargaUnidMedidas">verificarCargaUnidMedidas</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -132,9 +147,30 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
+                  <a name="consultarProductosFiltro">
+                  </a> <!-- consultarProductosFiltro -->
+                  <span class="method-name">consultarProductosFiltro</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="verificarCargaProductos">
                   </a> <!-- verificarCargaProductos -->
                   <span class="method-name">verificarCargaProductos</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verificarCargaTipoProductos">
+                  </a> <!-- verificarCargaTipoProductos -->
+                  <span class="method-name">verificarCargaTipoProductos</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verificarCargaUnidMedidas">
+                  </a> <!-- verificarCargaUnidMedidas -->
+                  <span class="method-name">verificarCargaUnidMedidas</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -197,20 +233,32 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(5);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verificarCargaProductos')
+data.setCell(0, 1, 'consultarProductosFiltro')
 data.setCell(0, 2, 'test.TestGeneral')
-data.setCell(0, 3, 349);
+data.setCell(0, 3, 362);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'verificarConexion')
+data.setCell(1, 1, 'verificarCargaProductos')
 data.setCell(1, 2, 'test.TestGeneral')
-data.setCell(1, 3, 25);
+data.setCell(1, 3, 24);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'verificarCargaTipoProductos')
+data.setCell(2, 2, 'test.TestGeneral')
+data.setCell(2, 3, 21);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'verificarCargaUnidMedidas')
+data.setCell(3, 2, 'test.TestGeneral')
+data.setCell(3, 3, 21);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'verificarConexion')
+data.setCell(4, 2, 'test.TestGeneral')
+data.setCell(4, 3, 21);
 window.suiteTableData['test_TestGeneral']= { tableData: data, tableDiv: 'times-div-test_TestGeneral'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 374 ms</span>
+              <span class="suite-total-time">Total running time: 449 ms</span>
               <div id="times-div-test_TestGeneral">
               </div> <!-- times-div-test_TestGeneral -->
             </div> <!-- times-div -->
@@ -238,12 +286,24 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">test.TestGeneral</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">verificarCargaProductos</span>
+                <span class="method-name">consultarProductosFiltro</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
+                <span class="method-name">verificarCargaProductos</span>
+                <span class="method-start">364 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verificarCargaTipoProductos</span>
+                <span class="method-start">389 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verificarCargaUnidMedidas</span>
+                <span class="method-start">410 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
                 <span class="method-name">verificarConexion</span>
-                <span class="method-start">351 ms</span>
+                <span class="method-start">431 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
