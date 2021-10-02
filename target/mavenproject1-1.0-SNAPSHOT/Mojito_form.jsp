@@ -23,8 +23,9 @@
             .container {
                 margin: auto;
                 border: 2px solid black;
-                padding: 25px 35px 5px;
+                /*padding: 25px 35px 5px;*/
                 border-radius: 5px;
+                height: 100%;
                 background-color: rgb(237, 229, 238);
             }
 
@@ -119,7 +120,7 @@
                     ColeccionProducto coleccion = new ColeccionProducto();
                     TreeMap<Integer, String> tiposProducto = coleccion.getTipoProducto();
                     %>
-                    <select name="selTipoPdtc" id="tipo" class="custom-select" required>
+                    <select name="selTipoPdtc" id="selTipoPdtc" class="custom-select" required>
                         <option selected value="">Tipo de producto</option>
                         <% for (Map.Entry<Integer, String> entrada : tiposProducto.entrySet() ) {%>
                         <option <%= entrada.getKey() == idTipo ? "selected" : "" %> value="<%= entrada.getKey() %>"><%= entrada.getValue() %></option>
@@ -128,8 +129,8 @@
                     <% 
                     TreeMap<Integer, String> tiposUnid = coleccion.getUnidadesMedida();
                     %>
-                    <select name="selTipoUnid" id="tipo" class="custom-select" required>
-                        <option selected>Unidades de medida</option>
+                    <select name="selTipoUnid" id="selTipoUnid" class="custom-select" required>
+                        <option selected value="">Unidades de medida</option>
                         <% for (Map.Entry<Integer, String> entrada : tiposUnid.entrySet() ) {%>
                         <option <%= entrada.getKey() == idTipo ? "selected" : "" %> value="<%= entrada.getKey() %>"><%= entrada.getValue() %></option>
                         <%}%>
