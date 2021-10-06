@@ -123,7 +123,7 @@
 
                 <div>
                     <input type="submit" value="Iniciar sesión" class="button">
-                    <p>¿No tienes cuenta?<a class="link" href="Registrarse.html">Registrate</a></p>
+                    <p>¿No tienes cuenta? <a class="link" href="Mojito_Registrarse.jsp">Registrate</a></p>
                 </div>
             </div>
         </form>

@@ -31,14 +31,12 @@ public class TestGeneral {
     @Test
     public void verificarCargaTipoProductos(){
         ProductoDAO dao = new ProductoDAO();
-        Assert.assertTrue(dao.cargarTiposProducto().size()> 0 , "No se cargaron datos. ");
+        Assert.assertTrue(dao.cargarTiposProducto().size()>= 3 , "No se cargaron datos. ");
     }
-    
-    
     
     @Test
     public void verificarCargaUnidMedidas(){
         ProductoDAO dao = new ProductoDAO();
-        Assert.assertTrue(dao.cargarUnidadesMedida().size()> 0 , "No se cargaron datos. ");
+        Assert.assertTrue(dao.cargarUnidadesMedida().size()>= 2 , "No se cargaron datos. ");
     }
 }

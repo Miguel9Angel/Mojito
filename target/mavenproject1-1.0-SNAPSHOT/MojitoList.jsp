@@ -17,10 +17,14 @@
         <title>JSP Page</title>
 
         <style>
+            #encabezado {
+                background-color: rgb(235, 230, 245);
+            }
+            
             body{
                 font-family: Arial, Helvetica, sans-serif;
                 margin: auto;
-                background-color: #f9fcf0;
+                background-color: white;
             }
 
             .container{
@@ -28,7 +32,7 @@
                 margin: auto;
                 text-align: center;
             }
-            
+
             #btnAddPrdct{
                 margin: 4px;
             }
@@ -52,32 +56,99 @@
             input[type="text"] {
                 margin: 4px;
                 font-size: 20px;
-                width: 70%;
+                width: 60%;
                 border-radius: 4px;
                 text-align: left;
             }
 
+            .dropbtn {
+                background-color: #4CAF50;
+                color: white;
+                padding: 8px;
+                font-size: 16px;
+                border: none;
+                cursor: pointer;
+                border-radius: 10px;
+                margin-right: 15px;
+            }
+
+            .dropdown {
+                position: relative;
+                display: inline-block;
+            }
+
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                z-index: 1;
+                right: 0;
+            }
+
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+
+            .dropdown-content a:hover {
+                background-color: #f1f1f1
+            }
+
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+
+            .dropdown:hover .dropbtn {
+                background-color: #3e8e41;
+            }
         </style>
 
     </head>
     <body>
+
+        <header>
+
+            <nav class="navbar" id="encabezado">
+                <a class="navbar-brand" id="logo" href="Mojito_PgPrincipal.jsp"> Mojito logo</a>
+                <ul class="nav d-flex justify-content-end">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="Mojito_PgPrincipal.jsp">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Nosotros</a>
+                    </li>
+                    <div class="dropdown">
+                        <button class="dropbtn">Menu</button>
+                        <div class="dropdown-content">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="#">Link 3</a>
+                        </div>
+                    </div>
+
+                </ul>
+        </header>
 
         <div class="container">
             <div class="titulo">
                 <h2>Lista de Ingredientes</h2>
             </div>
             <%
-            String filtro = request.getParameter("txtFiltro")==null ? "" : request.getParameter("txtFiltro");
+                String filtro = request.getParameter("txtFiltro") == null ? "" : request.getParameter("txtFiltro");
             %>
             <div class="busqueda">
                 <form method="GET" action="">
-                <input type="text" name="txtFiltro" id="txtFiltro" placeholder="Consultar">
-                <button type="submit"class="btn btn-primary"><i class="fas fa-search"></i> Buscar</button>
-                <a href="Mojito_form.jsp?accion=nuevo&id=0"> <button type="button" id="btnAddPrdct" class="btn btn-info" >Agregar producto</button></a>  
+                    <input type="text" name="txtFiltro" id="txtFiltro" placeholder="Consultar">
+                    <button type="submit"class="btn btn-primary"><i class="fas fa-search"></i> Buscar</button>
+                    <a href="Mojito_form.jsp?accion=nuevo&id=0"> <button type="button" id="btnAddPrdct" class="btn btn-info" >Agregar producto</button></a>  
                 </form>
-            
+
             </div>
-            
+
 
             <div class="table">
                 <table class="table table-striped">
@@ -93,15 +164,15 @@
                     </thead>
 
                     <tbody>
-                        <%                           
+                        <%
                             ColeccionProducto coleccion = new ColeccionProducto();
                             boolean hayDatos;
-                            if (filtro.equals("")){
+                            if (filtro.equals("")) {
                                 hayDatos = coleccion.cargarProductos();
-                            }else{
+                            } else {
                                 hayDatos = coleccion.cargarProductosFiltro(filtro);
                             }
-                            
+
                             if (hayDatos) {
 
                                 for (Productos j : coleccion.getLista()) {
@@ -109,15 +180,15 @@
                         <tr>
                             <td><%= j.getIdIngredients()%></td>
                             <td><%= j.getNombre()%></td>
-                            <td><%= coleccion.getUnidadesMedida(j.getUnidadMedida()) %></td>
+                            <td><%= coleccion.getUnidadesMedida(j.getUnidadMedida())%></td>
                             <td><%= j.getCantidad()%></td>
-                            <td><%=  coleccion.getTipoProducto(j.getTipoMateriaPrima())%></td>
+                            <td><%= coleccion.getTipoProducto(j.getTipoMateriaPrima())%></td>
                             <td><a href="Mojito_form.jsp?accion=editar&id=<%=j.getIdIngredients()%>"><button type="button" class="btn btn-info"><i class="fas fa-edit"></i></button></a>
                                 <button type="button" class="btn btn-danger"><i class="bi bi-trash"></i></button></td>
                         </tr>
                         <%
                             }
-          
+
                         } else {
                         %>
                         <tr>

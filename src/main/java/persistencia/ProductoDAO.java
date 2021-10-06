@@ -18,7 +18,7 @@ public class ProductoDAO {
                 String nombre = rs.getString("nombreMateriaPrima");
                 int undidadMedida = rs.getInt("idUnidadMedida");
                 int cantidad = rs.getInt("cantidadMateriaPrima");
-                int tipoMateria = rs.getInt("idUnidadMedida");
+                int tipoMateria = rs.getInt("idTipoMateriaPrima");
                 
                 Productos j = new Productos(idIngredients, nombre, undidadMedida, cantidad, tipoMateria);
                 lista.add(j);
@@ -123,7 +123,7 @@ public class ProductoDAO {
                 String nombre = rs.getString("nombreMateriaPrima");
                 int undidadMedida = rs.getInt("idUnidadMedida");
                 int cantidad = rs.getInt("cantidadMateriaPrima");
-                int tipoMateria = rs.getInt("idUnidadMedida");
+                int tipoMateria = rs.getInt("idTipoMateriaPrima");
                 
                 j = new Productos(idIngredients, nombre, undidadMedida, cantidad, tipoMateria);
             }

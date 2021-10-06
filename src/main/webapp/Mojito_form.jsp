@@ -92,11 +92,9 @@
                     ColeccionProducto coleccion = new ColeccionProducto();
                     Productos j = coleccion.cargarUnProducto(id);
                     nombre = j.getNombre();
-                    idTipo = j.getTipoMateriaPrima();
                     Cantidad = j.getCantidad();
                     TipoMateriaPrima = j.getTipoMateriaPrima();
                     UnidadMedida = j.getUnidadMedida();
-                    out.println(idTipo);
                 }
                 else{
                     id = 0;
@@ -123,7 +121,7 @@
                     <select name="selTipoPdtc" id="selTipoPdtc" class="custom-select" required>
                         <option selected value="">Tipo de producto</option>
                         <% for (Map.Entry<Integer, String> entrada : tiposProducto.entrySet() ) {%>
-                        <option <%= entrada.getKey() == idTipo ? "selected" : "" %> value="<%= entrada.getKey() %>"><%= entrada.getValue() %></option>
+                        <option <%= entrada.getKey() == TipoMateriaPrima ? "selected" : "" %> value="<%= entrada.getKey() %>"><%= entrada.getValue()+tiposProducto.size()+""+TipoMateriaPrima %></option>
                         <%}%>
                     </select>
                     <% 
@@ -132,7 +130,7 @@
                     <select name="selTipoUnid" id="selTipoUnid" class="custom-select" required>
                         <option selected value="">Unidades de medida</option>
                         <% for (Map.Entry<Integer, String> entrada : tiposUnid.entrySet() ) {%>
-                        <option <%= entrada.getKey() == idTipo ? "selected" : "" %> value="<%= entrada.getKey() %>"><%= entrada.getValue() %></option>
+                        <option <%= entrada.getKey() == UnidadMedida ? "selected" : "" %> value="<%= entrada.getKey() %>"><%= entrada.getValue() %></option>
                         <%}%>
                     </select>
                 </div>
