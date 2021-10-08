@@ -6,7 +6,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>contralodorProductos</servlet-name>
-        <url-pattern>/Productos</url-pattern>
+        <url-pattern>/inicio</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

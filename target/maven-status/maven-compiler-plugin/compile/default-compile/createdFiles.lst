@@ -1,3 +1,4 @@
+controlador\contralodorProductos.class
 Logica\Productos.class
 Logica\Usuario.class
 persistencia\ProductoDAO.class

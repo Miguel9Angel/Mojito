@@ -2,25 +2,31 @@ package Logica;
 
 public class Usuario {
     private int id;
+    private String nombre;
     private String usuario;
     private String clave;
     private String rol;
+    private String email;
     
     public Usuario() {
     }
 
-    public Usuario(String usuario, String clave, String rol) {
+    public Usuario(String nombre, String usuario, String clave, String rol, String email) {
+        this.nombre = nombre;
         this.usuario = usuario;
         this.clave = clave;
         this.rol = rol;
-    }
-    
-    public Usuario(int id, String usuario, String clave, String rol){
-        this(usuario, clave, rol);
-        this.id = id;
+        this.email = email;
     }
 
-    
+    public Usuario(int id, String nombre, String usuario, String clave, String rol, String email) {
+        this.id = id;
+        this.nombre = nombre;
+        this.usuario = usuario;
+        this.clave = clave;
+        this.rol = rol;
+        this.email = email;
+    }
 
     public int getId() {
         return id;
@@ -28,6 +34,14 @@ public class Usuario {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public String getUsuario() {
@@ -53,5 +67,13 @@ public class Usuario {
     public void setRol(String rol) {
         this.rol = rol;
     }
-    
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
 }

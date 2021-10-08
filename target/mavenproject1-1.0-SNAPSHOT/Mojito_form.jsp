@@ -100,7 +100,7 @@
                     id = 0;
                 }
             %>
-            <form method="post" action="Mojito_ctrl.jsp" class="form" id="inputs">
+            <form method="post" action="Mojito_ctrlProduc.jsp" class="form" id="inputs">
                 <div class="form-group">
                     <label for="id">id del producto</label>
                     <input type="text" class="form-control" placeholder="id" id="textId" name="textId" value="<%= id %>" readonly>

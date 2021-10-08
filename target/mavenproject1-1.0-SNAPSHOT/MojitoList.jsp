@@ -113,7 +113,7 @@
         <header>
 
             <nav class="navbar" id="encabezado">
-                <a class="navbar-brand" id="logo" href="Mojito_PgPrincipal.jsp"> Mojito logo</a>
+                <a class="navbar-brand" id="logo" href="inicio"> Mojito logo</a>
                 <ul class="nav d-flex justify-content-end">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="Mojito_PgPrincipal.jsp">Inicio</a>

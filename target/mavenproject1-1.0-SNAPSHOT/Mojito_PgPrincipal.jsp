@@ -108,7 +108,8 @@
                         <div class="dropdown-content">
                             <a href="Mojito_iniSesion.jsp">Iniciar Sesion</a>
                             <a href="Mojito_Registrarse.jsp">Registrarse</a>
-                            <a href="#">Link 3</a>
+                            <a href="Mojito_Usuarios.jsp">Registrar Usuarios</a>
+                            <a href="MojitoList.jsp">Lista Productos</a>
                         </div>
                     </div>
 

@@ -2,28 +2,28 @@
 <testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-10-06T10:09:05 COT" name="test.TestGeneral" finished-at="2021-10-06T10:09:06 COT" duration-ms="478">
+  <suite started-at="2021-10-08T07:25:03 COT" name="test.TestGeneral" finished-at="2021-10-08T07:25:04 COT" duration-ms="523">
     <groups>
     </groups>
-    <test started-at="2021-10-06T10:09:05 COT" name="Command line test" finished-at="2021-10-06T10:09:06 COT" duration-ms="478">
+    <test started-at="2021-10-08T07:25:03 COT" name="Command line test" finished-at="2021-10-08T07:25:04 COT" duration-ms="523">
       <class name="test.TestGeneral">
-        <test-method signature="consultarProductosFiltro()[pri:0, instance:test.TestGeneral@20deea7f]" started-at="2021-10-06T10:09:05 COT" name="consultarProductosFiltro" finished-at="2021-10-06T10:09:06 COT" duration-ms="357" status="PASS">
+        <test-method signature="consultarProductosFiltro()[pri:0, instance:test.TestGeneral@1dde4cb2]" started-at="2021-10-08T07:25:03 COT" name="consultarProductosFiltro" finished-at="2021-10-08T07:25:04 COT" duration-ms="394" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- consultarProductosFiltro -->
-        <test-method signature="verificarCargaProductos()[pri:0, instance:test.TestGeneral@20deea7f]" started-at="2021-10-06T10:09:06 COT" name="verificarCargaProductos" finished-at="2021-10-06T10:09:06 COT" duration-ms="26" status="PASS">
+        <test-method signature="verificarCargaProductos()[pri:0, instance:test.TestGeneral@1dde4cb2]" started-at="2021-10-08T07:25:04 COT" name="verificarCargaProductos" finished-at="2021-10-08T07:25:04 COT" duration-ms="24" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verificarCargaProductos -->
-        <test-method signature="verificarCargaTipoProductos()[pri:0, instance:test.TestGeneral@20deea7f]" started-at="2021-10-06T10:09:06 COT" name="verificarCargaTipoProductos" finished-at="2021-10-06T10:09:06 COT" duration-ms="23" status="PASS">
+        <test-method signature="verificarCargaTipoProductos()[pri:0, instance:test.TestGeneral@1dde4cb2]" started-at="2021-10-08T07:25:04 COT" name="verificarCargaTipoProductos" finished-at="2021-10-08T07:25:04 COT" duration-ms="24" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verificarCargaTipoProductos -->
-        <test-method signature="verificarCargaUnidMedidas()[pri:0, instance:test.TestGeneral@20deea7f]" started-at="2021-10-06T10:09:06 COT" name="verificarCargaUnidMedidas" finished-at="2021-10-06T10:09:06 COT" duration-ms="23" status="PASS">
+        <test-method signature="verificarCargaUnidMedidas()[pri:0, instance:test.TestGeneral@1dde4cb2]" started-at="2021-10-08T07:25:04 COT" name="verificarCargaUnidMedidas" finished-at="2021-10-08T07:25:04 COT" duration-ms="21" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verificarCargaUnidMedidas -->
-        <test-method signature="verificarConexion()[pri:0, instance:test.TestGeneral@20deea7f]" started-at="2021-10-06T10:09:06 COT" name="verificarConexion" finished-at="2021-10-06T10:09:06 COT" duration-ms="18" status="PASS">
+        <test-method signature="verificarConexion()[pri:0, instance:test.TestGeneral@1dde4cb2]" started-at="2021-10-08T07:25:04 COT" name="verificarConexion" finished-at="2021-10-08T07:25:04 COT" duration-ms="23" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verificarConexion -->
